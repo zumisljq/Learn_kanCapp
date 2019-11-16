@@ -1,0 +1,25 @@
+{
+    "presets": [
+        "@babel/preset-env",
+        "mobx"
+    ],
+    "plugins": [
+        "@babel/plugin-transform-runtime",
+        [
+            "component",
+            {
+                "libraryName": "antd",
+                "style": true
+            },
+            "antd"
+        ],
+        [
+            "component",
+            {
+                "libraryName": "test-module",
+                "style": true
+            },
+            "test-module"
+        ]
+    ]
+}
