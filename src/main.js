@@ -5,6 +5,9 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 Vue.use(VueRouter);
 import router from './router.js';
+//导入vue-resource 和安装
+import  VueResource from 'vue-resource';
+Vue.use(VueResource);
 //主模块 App.vue
 import app from './App.vue';
 //使用mui组件 这是基于vue的组件 使用按需导入 需要配置插件 具体在mui的文档快速上手按需导入那边

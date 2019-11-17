@@ -3,7 +3,10 @@
     <!--头部 header-->
     <mt-header fixed title="试制 移动端页面"></mt-header>
     <!--路由区域 router-view-->
-    <router-view></router-view>
+	<transition name="ssswiperrr">    <!--切换 router-view的 动画效果-->
+	<router-view></router-view>
+	</transition>
+    
     <!--底部菜单栏 tabbar MUI组件的-->
     <nav class="mui-bar mui-bar-tab">
 			<router-link class="mui-tab-item" to="/home">
@@ -34,6 +37,19 @@
 
 <style scoped>
 .app-container{
-    padding-top: 40px;
+	padding-top: 40px;
+	overflow-x: hidden;
+}
+.ssswiperrr-enter-active, .ssswiperrr-leave-active {
+	transition:  .5s;
+}
+.ssswiperrr-enter{ /* 这是VUE的动画方式 标签加上nanme 直接引用 避免v-前缀*/ 
+	opacity: 0;
+	transform: translateX(100%);/* 进入*/ 
+}
+.ssswiperrr-leave-to {
+	position: absolute;
+  	opacity: 0;
+  	transform: translateX(-100%);/* 出去*/ 
 }
 </style>
