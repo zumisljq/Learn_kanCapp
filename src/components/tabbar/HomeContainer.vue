@@ -8,24 +8,24 @@
     </mt-swipe>
     <!--接下来是表格-->
     <ul class="mui-table-view mui-grid-view mui-grid-9">
-		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
+		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><router-link to="/home/newslist">
 		                    <img src="../../images/item_mini.png" alt="">
-		                    <div class="mui-media-body">Home</div></a></li>
-		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
+		                    <div class="mui-media-body">NEWS</div></router-link></li>
+		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><router-link to="#">
 		                    <img src="../../images/item_mini.png" alt="">
-		                    <div class="mui-media-body">Email</div></a></li>
-		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
+		                    <div class="mui-media-body">XXXX</div></router-link></li>
+		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><router-link to="#">
 		                    <img src="../../images/item_mini.png" alt="">
-		                    <div class="mui-media-body">Chat</div></a></li>
-		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
+		                    <div class="mui-media-body">XXXX</div></router-link></li>
+		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><router-link to="#">
 		                    <img src="../../images/item_mini.png" alt="">
-		                    <div class="mui-media-body">location</div></a></li>
-		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
+		                    <div class="mui-media-body">XXXX</div></router-link></li>
+		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><router-link to="#">
 		                    <img src="../../images/item_mini.png" alt="">
-		                    <div class="mui-media-body">Search</div></a></li>
-		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
+		                    <div class="mui-media-body">XXXX</div></router-link></li>
+		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><router-link to="/home/pastEvents">
 		                    <img src="../../images/item_mini.png" alt="">
-		                    <div class="mui-media-body">Phone</div></a></li>
+		                    <div class="mui-media-body">Past Events</div></router-link></li>
 		        </ul> 
 
   </div>
@@ -46,7 +46,7 @@ export default {
     },
     methods: {
         getPic(){//使用教程下面评论的api 回头需要学下怎么制作接口 方便自己测试 
-            this.$http.get('http://www.liulongbin.top:3005/api/getlunbo').then(result =>{
+            this.$http.get('api/getlunbo').then(result =>{//设置全局的根路径 Vue.http.options.root = 'http://www.liulongbin.top:3005'
                 if(result.body.status === 0){
                     this.swipePicList = result.body.message;
                 } else {
