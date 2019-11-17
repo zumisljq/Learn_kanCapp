@@ -10,6 +10,8 @@ import  VueResource from 'vue-resource';
 Vue.use(VueResource);
 //2.设置全局的根路径
 Vue.http.options.root = 'http://www.liulongbin.top:3005'
+//3  emulateJSON 请求方法 全局设置post的表单格式
+Vue.http.options.emulateJSON = true;
 
 //全局过滤器 使用 moment 需要-S安装
 import moment from 'moment';

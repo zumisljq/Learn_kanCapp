@@ -21,6 +21,7 @@
 
 <script>
 import { Toast } from 'mint-ui'
+import 'mint-ui/lib/Toast/style.css'
 export default {
     data() {
         return {

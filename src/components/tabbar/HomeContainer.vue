@@ -35,6 +35,7 @@
 
 <script>
 import { Toast } from 'mint-ui'//方法需要引入
+import 'mint-ui/lib/Toast/style.css'
 export default {
     data() {
         return {

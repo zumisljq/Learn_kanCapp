@@ -19,6 +19,7 @@
 
 <script>
 import { Toast } from 'mint-ui'
+import 'mint-ui/lib/Toast/style.css'
 import Comment from '../subcomponents/Comment.vue'//使用评论组件 要在 export注册
 //需要拿url的id 
 //判断来使用那个api的数据渲染 
