@@ -8,7 +8,8 @@ import SearchContainer from './components/tabbar/SearchContainer.vue'
 import NewsList from './components/news/NewsList.vue'
 import NewsInfo from './components/news/NewsInfo.vue'
 
-import photosList from './components/photos/photosList.vue'
+import PhotosList from './components/photos/PhotosList.vue'
+import PhotoInfo from './components/photos/PhotoInfo.vue'
 
 var router = new VueRouter({
     routes: [//路由规则 
@@ -19,7 +20,8 @@ var router = new VueRouter({
         { path: '/search', component: SearchContainer},
         { path: '/home/newslist', component: NewsList},
         { path: '/home/newslist/newsinfo/:id', component: NewsInfo},
-        { path: '/home/photoslist', component: photosList},
+        { path: '/home/photoslist', component: PhotosList},
+        { path: '/home/photosinfo/:id', component: PhotoInfo},
     ],
     linkActiveClass: 'mui-active'//覆盖默认的active样式 默认是router-link-active
 })

@@ -1,0 +1,10 @@
+figure {
+  float: left;
+  height: 80px;
+  margin: 5px;padding: 0;
+}
+
+figure img {
+  margin: 0;
+  height: 100%;
+}

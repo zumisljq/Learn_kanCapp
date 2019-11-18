@@ -35,6 +35,7 @@ Vue.component(Header.name, Header);
 Vue.component(Swipe.name, Swipe);//轮播图
 Vue.component(SwipeItem.name, SwipeItem);
 Vue.component(Button.name, Button);
+// Vue.use(Lazyload); mint ui 的懒加载太...了 样式不全无法按需 换vant
 
 //使用mui 的tabbar!  photoslist的活动效果需要js 因为mui的js不是严格模式 所以换Vant
 import './lib/mui/css/mui.min.css'
@@ -50,11 +51,23 @@ import './lib/mui/fonts/mui-icons-extra.ttf'
 //     "libraryDirectory": "es",
 //     "style": true
 //   }]
-import Tab from 'vant/lib/Tab';
+import Tab from 'vant/lib/Tab';//嗯呃阿阿阿阿阿
 import 'vant/lib/Tab/style';
 import Tabs  from 'vant/lib/Tabs';
 import 'vant/lib/Tabs/style';
-Vue.use(Tab).use(Tabs);   //嗯呃阿阿阿阿阿 成功了
+import Lazyload  from 'vant/lib/Lazyload';//vant 的懒加载
+import 'vant/lib/Lazyload/style';
+Vue.use(Tab).use(Tabs).use(Lazyload,{//注册时设置`lazyComponent`选项  加Options loading：str改变加载时候的图片
+loading: "./images/347_6901.png",//嗯呃阿阿阿阿阿 
+});   
+// import ImagePreview from 'vant/lib/image-preview';//这是vant的图片预览组件
+// Vue.use(ImagePreview);
+import VuePreview from 'vue-preview'//Vue preview 新版 需要先来个全局样式....
+Vue.use(VuePreview,{tapToClose: true})
+import './css/global.css'//缩略图的样式
+
+
+
 
 
 var vm = new Vue({

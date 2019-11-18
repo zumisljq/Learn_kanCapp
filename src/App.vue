@@ -40,9 +40,11 @@
 	padding-top: 40px;
 	padding-bottom: 50px;
 	overflow-x: hidden;
+
 }
 .mint-header{
 	background-color: rgb(75, 210, 255);
+	z-index: 9;
 }
 .ssswiperrr-enter-active, .ssswiperrr-leave-active {
 	transition:  .5s;
