@@ -20,6 +20,9 @@
                 "style": true
             },
             "test-module"
-        ]
+        ],["component", {
+            "libraryName": "vant",
+            "style": true
+          }, "vant"]
     ]
 }

@@ -36,15 +36,25 @@ Vue.component(Swipe.name, Swipe);//轮播图
 Vue.component(SwipeItem.name, SwipeItem);
 Vue.component(Button.name, Button);
 
-//使用mui 的tabbar!
+//使用mui 的tabbar!  photoslist的活动效果需要js 因为mui的js不是严格模式 所以换Vant
 import './lib/mui/css/mui.min.css'
 //购物车这个破图标需要的css和字体
 import './lib/mui/css/icons-extra.css'
 import './lib/mui/fonts/mui-icons-extra.ttf'
 
-
-
-
+//Vant  直接手动导入
+//import { Tab, Tabs } from 'vant';
+//Vue.use(Tab).use(Tabs); 需要添加 这是babel-plugin-import 方法
+// ["import", {
+//     "libraryName": "vant",
+//     "libraryDirectory": "es",
+//     "style": true
+//   }]
+import Tab from 'vant/lib/Tab';
+import 'vant/lib/Tab/style';
+import Tabs  from 'vant/lib/Tabs';
+import 'vant/lib/Tabs/style';
+Vue.use(Tab).use(Tabs);   //嗯呃阿阿阿阿阿 成功了
 
 
 var vm = new Vue({
