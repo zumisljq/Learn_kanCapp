@@ -14,7 +14,7 @@
     <hr/>
     <!--body-->
     <div v-html="photoInfo.content"></div>
-    <hr>
+    
     <!--评论-->
     <comment-box :id="this.id"></comment-box>
   </div>
@@ -76,5 +76,8 @@ export default {
 .view-img{
     width: 100%;
     height: 200px;
+}
+*{
+    margin: 5px;
 }
 </style>

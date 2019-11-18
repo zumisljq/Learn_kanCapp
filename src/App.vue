@@ -7,7 +7,7 @@
 	<router-view></router-view>
 	</transition>
     
-    <!--底部菜单栏 tabbar MUI组件的-->
+    <!-- 底部菜单栏 tabbar MUI组件的                    -->
     <nav class="mui-bar mui-bar-tab">
 			<router-link class="mui-tab-item" to="/home">
 				<span class="mui-icon mui-icon-home"></span>

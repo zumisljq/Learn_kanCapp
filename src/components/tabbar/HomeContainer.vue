@@ -1,29 +1,25 @@
 <template>
   <div>
     <!--轮播图-->
-    <mt-swipe :auto="4000">
-      <mt-swipe-item v-for="item in swipePicList" :key="item.id" >
-          <img :src="item.img" alt="图片">
-      </mt-swipe-item>      <!--连接就不设定了 因为接口数据是他人的-->
-    </mt-swipe>
+    <swiper-box :swipePicList = "swipePicList" :itFull="true"></swiper-box><!--换成组件 要用必须传值 设定属性-->
     <!--接下来是表格-->
     <ul class="mui-table-view mui-grid-view mui-grid-9">
-		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><router-link to="/home/newslist">
+		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4"><router-link to="/home/newslist">
 		                    <img src="../../images/item_mini.png" alt="">
 		                    <div class="mui-media-body">NEWS</div></router-link></li>
-		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><router-link to="/home/photoslist">
+		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4"><router-link to="/home/photoslist">
 		                    <img src="../../images/item_mini.png" alt="">
 		                    <div class="mui-media-body">Photos</div></router-link></li>
-		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><router-link to="#">
+		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4"><router-link to="/home/commodity">
+		                    <img src="../../images/item_mini.png" alt="">
+		                    <div class="mui-media-body">Commodity</div></router-link></li>
+		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4"><router-link to="#">
 		                    <img src="../../images/item_mini.png" alt="">
 		                    <div class="mui-media-body">XXXX</div></router-link></li>
-		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><router-link to="#">
+		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4"><router-link to="#">
 		                    <img src="../../images/item_mini.png" alt="">
 		                    <div class="mui-media-body">XXXX</div></router-link></li>
-		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><router-link to="#">
-		                    <img src="../../images/item_mini.png" alt="">
-		                    <div class="mui-media-body">XXXX</div></router-link></li>
-		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><router-link to="/home/pastEvents">
+		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4"><router-link to="/home/pastEvents">
 		                    <img src="../../images/item_mini.png" alt="">
 		                    <div class="mui-media-body">Past Events</div></router-link></li>
 		        </ul> 
@@ -36,10 +32,14 @@
 <script>
 import { Toast } from 'mint-ui'//方法需要引入
 import 'mint-ui/lib/Toast/style.css'
+
+import  Swiper from '../subcomponents/Swiper.vue'
+
 export default {
     data() {
         return {
             swipePicList: null,
+            itFull:true,
         }
     },
     created() {
@@ -56,23 +56,15 @@ export default {
             })
         }
     },
+    components:{
+        "swiper-box": Swiper,
+    }
 };
 </script>
 
 
 <style lang="scss" scoped>//sass样式使用
-.mint-swipe {
-    height: 200px;
-}
-.mint-swipe-item {
-  &:nth-child(1){background-color: lightpink;}
-  &:nth-child(2){background-color: lightblue;}
-  &:nth-child(3){background-color: lightgreen;}
-  img{
-      height: 100%;
-      width: 100%;
-  }
-}
+
 .mui-grid-view.mui-grid-9{
     background-color: transparent;
     border: none;

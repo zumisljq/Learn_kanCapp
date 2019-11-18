@@ -2,8 +2,8 @@
   <div>
     <div class="cmt-container">
       <h3>评论</h3>
-      <span>comment</span>
-      <hr/>
+      <h3>comment</h3>
+      <br>
       <!-- 需要效验是否为空  -->
       <textarea cols="30" rows="3" placeholder="请输入评论内容" v-model="msg"></textarea>
       <mt-button size="large" type="primary" @click="postComment">发表评论</mt-button>
@@ -91,18 +91,24 @@ export default {
   z-index: 99;
 }
 .cmt-container {
+  margin: 5px;
+   text-align: center;
   h3 {
+    margin: 0;
+    text-align: center;
     color: rgb(117, 117, 117);
-  }
-  span {
-    color: #ccc;
+    background-color: rgba(204, 204, 204, 0.555);
+  
   }
   textarea {
+    
     padding: 15px;
     margin: 0;
+    width: 100%;
   }
 
   .cmt-list {
+    text-align: left;
     margin: 10px 0;
     .cmt-item {
       border: 2px solid #ccc;

@@ -86,6 +86,7 @@ export default {
 <style lang="scss" scoped>
 *{
     z-index: 0;
+    
 }
 a {
   width: 100%;

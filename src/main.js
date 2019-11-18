@@ -25,7 +25,7 @@ Vue.filter('dateFormat', function(dataStr,pattern = "YYYY-MM-DD HH:mm:ss"){
 import app from './App.vue';
 
 
-//使用mui组件 这是基于vue的组件 使用按需导入 需要配置插件 具体在mui的文档快速上手按需导入那边
+//使用mint-ui组件 这是基于vue的组件 使用按需导入 需要配置插件 具体在mui的文档快速上手按需导入那边
 import { Header,Swipe, SwipeItem, Button } from 'mint-ui';
 import 'mint-ui/lib/header/style.css'
 import 'mint-ui/lib/swipe/style.css'
@@ -38,7 +38,7 @@ Vue.component(Button.name, Button);
 // Vue.use(Lazyload); mint ui 的懒加载太...了 样式不全无法按需 换vant
 
 //使用mui 的tabbar!  photoslist的活动效果需要js 因为mui的js不是严格模式 所以换Vant
-import './lib/mui/css/mui.min.css'
+import './lib/mui/css/mui.css'  //有冲突 各种冲突 公用属性太多了
 //购物车这个破图标需要的css和字体
 import './lib/mui/css/icons-extra.css'
 import './lib/mui/fonts/mui-icons-extra.ttf'
@@ -50,7 +50,14 @@ import './lib/mui/fonts/mui-icons-extra.ttf'
 //     "libraryName": "vant",
 //     "libraryDirectory": "es",
 //     "style": true
-//   }]
+//  }]
+// app.vue tabbar 
+// import Tabbar  from 'vant/lib/Tabbar';
+// import 'vant/lib/Tabbar/style';
+// import TabbarItem  from 'vant/lib/tabbar-item';
+// import 'vant/lib/tabbar-item/style';
+// Vue.use(Tabbar).use(TabbarItem);
+
 import Tab from 'vant/lib/Tab';//嗯呃阿阿阿阿阿
 import 'vant/lib/Tab/style';
 import Tabs  from 'vant/lib/Tabs';
@@ -62,6 +69,15 @@ loading: "./images/347_6901.png",//嗯呃阿阿阿阿阿
 });   
 // import ImagePreview from 'vant/lib/image-preview';//这是vant的图片预览组件
 // Vue.use(ImagePreview);
+import Stepper from 'vant/lib/Stepper';//步进器 Stepper
+import 'vant/lib/Stepper/style';
+Vue.use(Stepper);
+
+
+
+
+
+
 import VuePreview from 'vue-preview'//Vue preview 新版 需要先来个全局样式....
 Vue.use(VuePreview,{tapToClose: true})
 import './css/global.css'//缩略图的样式
