@@ -73,6 +73,6 @@ import './css/global.css'//缩略图的样式
 var vm = new Vue({
     el: '#app',
     
-    render: c => c(app),
-    router//是func(c){return c(app)}的简写 和路由不同 是直接替换实例中id=app模块
+    render: c => c(app),//是func(c){return c(app)}的简写 和路由不同 是直接替换实例中id=app模块
+    router
 })
