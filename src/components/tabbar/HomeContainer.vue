@@ -21,7 +21,7 @@
 		                    <div class="mui-media-body">XXXX</div></router-link></li>
 		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4"><router-link to="/home/pastEvents">
 		                    <img src="../../images/item_mini.png" alt="">
-		                    <div class="mui-media-body">Past Events</div></router-link></li>
+		                    <div class="mui-media-body">XXXX</div></router-link></li>
 		        </ul> 
 
   </div>
