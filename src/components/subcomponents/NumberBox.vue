@@ -16,7 +16,7 @@ export default {
     props: ["max", "max"],//拿到库存最大值
     methods: {
         getValueIn(a){
-            this.$emit('getValue',this.value);//拿到方法 给value vant的插件自动检索变化 双向绑定value
+            this.$emit('getValue',this.value);//拿到父组件的方法方式 给value vant的插件自动检索变化 双向绑定value
         }
     },
 };
