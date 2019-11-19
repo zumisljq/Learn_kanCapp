@@ -101,10 +101,12 @@ export default {
     width: 30%;
     display: flex;
     flex-direction: row;
-    padding-left: 6px;
+  
     img {
-      width: 70px;
-      height: 70px;
+      width: 50px;
+      height: 50px;
+      margin-top: 2px;
+      padding-top: 5px;
       margin-left: 15px;
     }
   }
